@@ -19,14 +19,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".DailyTasksActivity" />
-        <activity android:name=".AddTaskActivity" />
+        <activity android:name=".AddTaskActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".SingleTaskDetailsActivity" android:screenOrientation="portrait"/>
 
         <provider
             android:name=".DataListProvider"
             android:authorities="com.paradicedev.dailyst.DataListProvider"
             android:multiprocess="true" />
 
-        <activity android:name=".SingleTaskDetailsActivity"></activity>
     </application>
 
 </manifest>

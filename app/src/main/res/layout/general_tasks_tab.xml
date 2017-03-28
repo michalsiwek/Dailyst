@@ -6,7 +6,7 @@
     android:background="@drawable/backrepeat">
 
     <TextView
-        android:text="G  E  N  E  R  A  L"
+        android:text="@string/general_tasks_label"
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:textSize="8pt"

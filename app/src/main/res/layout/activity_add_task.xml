@@ -35,8 +35,8 @@ android:paddingTop="@dimen/activity_vertical_margin">
     android:layout_alignParentLeft="true"
     android:layout_alignParentStart="true"
     android:id="@+id/task_title_editText"
-    android:inputType="textCapSentences|textMultiLine"
-    android:hint="Task title..." />
+    android:inputType="textCapSentences"
+    android:hint="@string/task_title_hint" />
 
 <EditText
     android:layout_width="match_parent"
@@ -47,13 +47,13 @@ android:paddingTop="@dimen/activity_vertical_margin">
     android:layout_marginTop="15dp"
     android:id="@+id/task_details_editText"
     android:layout_below="@id/task_title_editText"
-    android:hint="Task details..." />
+    android:hint="@string/task_details_hint" />
 
 <Button
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/save_button"
-    android:text="Save"
+    android:text="@string/save_new_task_button_label"
     android:layout_alignParentBottom="true"
     android:onClick="saveNewTask"/>
 
@@ -64,7 +64,7 @@ android:paddingTop="@dimen/activity_vertical_margin">
     android:layout_below="@id/task_details_editText"
     android:layout_marginTop="10dp"
     android:gravity="center_vertical"
-    android:text="Deadline:"
+    android:text="@string/task_deadline_label"
     />
 
 <TextView
@@ -86,7 +86,7 @@ android:paddingTop="@dimen/activity_vertical_margin">
     android:layout_alignParentRight="true"
     android:layout_below="@id/task_details_editText"
     android:layout_marginTop="10dp"
-    android:text="Set Deadline"
+    android:text="@string/set_deadline_button_label"
     android:textSize="5pt" />
 
 </RelativeLayout>

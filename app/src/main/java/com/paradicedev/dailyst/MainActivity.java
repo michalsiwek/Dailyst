@@ -56,23 +56,17 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.app_manual_dialog, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.app_manual_button) {
+            infoDialog();
         }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -124,43 +118,43 @@ public class MainActivity extends AppCompatActivity {
 
         switch (view.getId()) {
             case R.id.button_monday:
-                dayLabel = "M  O  N  D  A  Y";
+                dayLabel = getString(R.string.mondays_tasks_label);
                 dayOfWeek = 2;
                 intent.putExtra("dayLabel",dayLabel);
                 intent.putExtra("dayOfWeek",dayOfWeek);
                 break;
             case R.id.button_tuesday:
-                dayLabel = "T  U  E  S  D  A  Y";
+                dayLabel = getString(R.string.tuesdays_tasks_label);
                 dayOfWeek = 3;
                 intent.putExtra("dayLabel",dayLabel);
                 intent.putExtra("dayOfWeek",dayOfWeek);
                 break;
             case R.id.button_wednesday:
-                dayLabel = "W  E  D  N  E  S  D  A  Y";
+                dayLabel = getString(R.string.wednesdays_tasks_label);
                 dayOfWeek = 4;
                 intent.putExtra("dayLabel",dayLabel);
                 intent.putExtra("dayOfWeek",dayOfWeek);
                 break;
             case R.id.button_thursday:
-                dayLabel = "T  H  U  R  S  D  A  Y";
+                dayLabel = getString(R.string.thursdays_tasks_label);
                 dayOfWeek = 5;
                 intent.putExtra("dayLabel",dayLabel);
                 intent.putExtra("dayOfWeek",dayOfWeek);
                 break;
             case R.id.button_friday:
-                dayLabel = "F  R  I  D  A  Y";
+                dayLabel = getString(R.string.fridays_tasks_label);
                 dayOfWeek = 6;
                 intent.putExtra("dayLabel",dayLabel);
                 intent.putExtra("dayOfWeek",dayOfWeek);
                 break;
             case R.id.button_saturday:
-                dayLabel = "S  A  T  U  R  D  A  Y";
+                dayLabel = getString(R.string.saturdays_tasks_label);
                 dayOfWeek = 7;
                 intent.putExtra("dayLabel",dayLabel);
                 intent.putExtra("dayOfWeek",dayOfWeek);
                 break;
             case R.id.button_sunday:
-                dayLabel = "S  U  N  D  A  Y";
+                dayLabel = getString(R.string.sundays_tasks_label);
                 dayOfWeek = 1;
                 intent.putExtra("dayLabel",dayLabel);
                 intent.putExtra("dayOfWeek",dayOfWeek);
@@ -175,5 +169,10 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = new Intent(this, AddTaskActivity.class);
         startActivity(intent);
+    }
+
+    public void infoDialog() {
+        AppManualDialog appManualDialog = new AppManualDialog();
+        appManualDialog.show(getFragmentManager(), null);
     }
 }

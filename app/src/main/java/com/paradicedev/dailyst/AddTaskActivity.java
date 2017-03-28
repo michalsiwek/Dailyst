@@ -63,8 +63,8 @@ public class AddTaskActivity extends AppCompatActivity {
                 deadlineTextView.setText(day + "." + monthToShow + "." + year);
             }
 
-            setDeadlineButton.setText("Change");
-
+            setDeadlineButton.setText(R.string.change_deadline_button_label);
+            deadlineInfo.clear();
         }
 
         setDeadlineButton.setOnClickListener(new View.OnClickListener() {
@@ -80,7 +80,7 @@ public class AddTaskActivity extends AppCompatActivity {
     // ADD
     public void saveNewTask(View view){
         if(taskTitle.getText().toString().equals("")){
-            Snackbar.make(view, "Task title is necessary!", Snackbar.LENGTH_LONG)
+            Snackbar.make(view, R.string.missing_task_title_alert, Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show();
         } else if (deadlineCalendar == null){
             Task task = new Task(taskTitle.getText().toString(), taskDetails.getText().toString(), -1, -1);
@@ -90,6 +90,7 @@ public class AddTaskActivity extends AppCompatActivity {
             Task task = new Task(taskTitle.getText().toString(), taskDetails.getText().toString(),
                     deadlineCalendar.getTimeInMillis(), deadlineCalendar.get(Calendar.DAY_OF_WEEK));
             tasksDMManager.addTask(view, task);
+            deadlineCalendar = null;
             this.finish();
         }
     }
@@ -99,10 +100,21 @@ public class AddTaskActivity extends AppCompatActivity {
         @Override
         public Dialog onCreateDialog(Bundle savedInstanceState) {
             final Calendar calendar = Calendar.getInstance();
-            int yy = calendar.get(Calendar.YEAR);
-            int mm = calendar.get(Calendar.MONTH);
-            int dd = calendar.get(Calendar.DATE);
-            return new DatePickerDialog(getActivity(), this, yy, mm, dd);
+            int yy;
+            int mm;
+            int dd;
+            if(deadlineCalendar != null) {
+                yy = deadlineCalendar.get(Calendar.YEAR);
+                mm = deadlineCalendar.get(Calendar.MONTH);
+                dd = deadlineCalendar.get(Calendar.DATE);
+            } else {
+                yy = calendar.get(Calendar.YEAR);
+                mm = calendar.get(Calendar.MONTH);
+                dd = calendar.get(Calendar.DATE);
+            }
+            DatePickerDialog datePickerDialog = new DatePickerDialog(getActivity(), this, yy, mm, dd);
+            datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
+            return datePickerDialog;
         }
 
         public void onDateSet(DatePicker view, int year, int month, int day) {
@@ -122,11 +134,8 @@ public class AddTaskActivity extends AppCompatActivity {
             deadlineCalendar.set(Calendar.YEAR,year);
             deadlineCalendar.set(Calendar.MONTH,month);
             deadlineCalendar.set(Calendar.DAY_OF_MONTH,day);
-            //deadlineCalendar.set(Calendar.HOUR,23);
-            //deadlineCalendar.set(Calendar.MINUTE,59);
-            //deadlineCalendar.set(Calendar.SECOND,59);
 
-            setDeadlineButton.setText("Change");
+            setDeadlineButton.setText(R.string.change_deadline_button_label);
         }
     }
 

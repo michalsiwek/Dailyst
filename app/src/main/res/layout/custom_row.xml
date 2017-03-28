@@ -39,7 +39,7 @@
         android:layout_marginBottom="2dp"
         android:layout_marginRight="7dp"
         android:layout_alignParentRight="true"
-        android:text="Done"
+        android:text="@string/done_button_label"
         android:backgroundTint="#2E7D32"
         android:textSize="5pt"
         android:visibility="invisible" />
@@ -52,7 +52,7 @@
         android:layout_marginBottom="2dp"
         android:layout_marginRight="7dp"
         android:layout_alignParentRight="true"
-        android:text="More"
+        android:text="@string/more_button_label"
         android:backgroundTint="#FF9800"
         android:textSize="5pt"
         android:visibility="invisible"

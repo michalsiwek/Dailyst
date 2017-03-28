@@ -1,6 +1,23 @@
 <resources>
     <string name="app_name">Dailyst</string>
-    <string name="action_settings">Settings</string>
-    <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_daily_tasks_list">DailyTasksListActivity</string>
+    <string name="mondays_tasks_label">M&#160;&#160;O&#160;&#160;N&#160;&#160;D&#160;&#160;A&#160;&#160;Y</string>
+    <string name="tuesdays_tasks_label">T&#160;&#160;U&#160;&#160;E&#160;&#160;S&#160;&#160;D&#160;&#160;A&#160;&#160;Y</string>
+    <string name="wednesdays_tasks_label">W&#160;&#160;E&#160;&#160;D&#160;&#160;N&#160;&#160;E&#160;&#160;S&#160;&#160;D&#160;&#160;A&#160;&#160;Y</string>
+    <string name="thursdays_tasks_label">T&#160;&#160;H&#160;&#160;U&#160;&#160;R&#160;&#160;S&#160;&#160;D&#160;&#160;A&#160;&#160;Y</string>
+    <string name="fridays_tasks_label">F&#160;&#160;R&#160;&#160;I&#160;&#160;D&#160;&#160;A&#160;&#160;Y</string>
+    <string name="saturdays_tasks_label">S&#160;&#160;A&#160;&#160;T&#160;&#160;U&#160;&#160;R&#160;&#160;D&#160;&#160;A&#160;&#160;Y</string>
+    <string name="sundays_tasks_label">S&#160;&#160;U&#160;&#160;N&#160;&#160;D&#160;&#160;A&#160;&#160;Y</string>
+    <string name="general_tasks_label">G&#160;&#160;E&#160;&#160;N&#160;&#160;E&#160;&#160;R&#160;&#160;A&#160;&#160;L</string>
+    <string name="done_button_label">Done</string>
+    <string name="more_button_label">More</string>
+    <string name="set_deadline_button_label">Set Deadline</string>
+    <string name="keep_button_label">Keep</string>
+    <string name="task_deadline_label">Deadline:</string>
+    <string name="task_title_hint">Task title...</string>
+    <string name="task_details_hint">Task details...</string>
+    <string name="save_new_task_button_label">Save</string>
+    <string name="change_deadline_button_label">Change</string>
+    <string name="missing_task_title_alert">Task title is necessary!</string>
+    <string name="dialog_close_button">OK</string>
 </resources>

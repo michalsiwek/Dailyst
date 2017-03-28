@@ -37,7 +37,7 @@
             android:layout_alignParentStart="true"
             android:id="@+id/taskdetails_title_editText"
             android:inputType="textCapSentences|textMultiLine"
-            android:hint="Task title..." />
+            android:hint="@string/task_title_hint" />
 
         <EditText
             android:layout_width="match_parent"
@@ -48,7 +48,7 @@
             android:layout_marginTop="15dp"
             android:id="@+id/taskdetails_details_editText"
             android:layout_below="@id/taskdetails_title_editText"
-            android:hint="Task details..." />
+            android:hint="@string/task_details_hint" />
 
         <TextView
             android:id="@+id/taskdetails_deadline_label_textview"
@@ -57,7 +57,7 @@
             android:layout_below="@id/taskdetails_details_editText"
             android:layout_marginTop="10dp"
             android:gravity="center_vertical"
-            android:text="Deadline:"
+            android:text="@string/task_deadline_label"
             />
 
         <TextView
@@ -79,7 +79,7 @@
             android:layout_alignParentRight="true"
             android:layout_below="@id/taskdetails_details_editText"
             android:layout_marginTop="10dp"
-            android:text="Set Deadline"
+            android:text="@string/set_deadline_button_label"
             android:textSize="5pt" />
 
         <LinearLayout
@@ -93,8 +93,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Keep"
-                android:backgroundTint="#FF9800"
+                android:text="@string/keep_button_label"
                 />
 
             <Button
@@ -102,7 +101,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Done"
+                android:text="@string/done_button_label"
                 android:backgroundTint="#2E7D32"
                 />
 
