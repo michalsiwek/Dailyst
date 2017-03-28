@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/round_corners"
+        android:backgroundTint="@android:color/white"
+        android:alpha="0.3"/>
+
+    <TextView
+        android:text="Username"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="65dp"
+        android:gravity="center_vertical"
+        android:id="@+id/task_title_in_row"
+        android:textColor="@android:color/black"
+        android:textSize="7pt"
+        android:singleLine="true" />
+
+    <Button
+        android:id="@+id/done_task_button"
+        android:layout_width="60dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginRight="7dp"
+        android:layout_alignParentRight="true"
+        android:text="Done"
+        android:backgroundTint="#2E7D32"
+        android:textSize="5pt"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/more_task_button"
+        android:layout_width="60dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginRight="7dp"
+        android:layout_alignParentRight="true"
+        android:text="More"
+        android:backgroundTint="#FF9800"
+        android:textSize="5pt"
+        android:visibility="invisible"
+        />
+
+</RelativeLayout>

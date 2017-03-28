@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backrepeat">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:textSize="8pt"
+    android:textColor="#EEEEEE"
+    android:background="@android:color/black"
+    android:gravity="center"
+    android:id="@+id/day_label_textview" />
+
+<ListView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="3dp"
+    android:layout_below="@+id/day_label_textview"
+    android:id="@+id/daily_tasks_list"
+    android:divider="@null"
+    android:dividerHeight="0dp"/>
+
+<android.support.design.widget.FloatingActionButton
+    android:id="@+id/fab"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentBottom="true"
+    android:layout_margin="@dimen/fab_margin"
+    app:srcCompat="@drawable/ic_add_entry" />
+
+</RelativeLayout>

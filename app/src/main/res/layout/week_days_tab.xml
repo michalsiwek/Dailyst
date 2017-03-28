@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="M  o  n  d  a  y"
+        android:textSize="10pt"
+        android:id="@+id/button_monday"
+        android:background="#26A69A"
+        android:onClick="daySelector" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="T  u  e  s  d  a  y"
+        android:textSize="10pt"
+        android:id="@+id/button_tuesday"
+        android:background="#009688"
+        android:onClick="daySelector" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="W  e  d  n  e  s  d  a  y"
+        android:textSize="10pt"
+        android:id="@+id/button_wednesday"
+        android:background="#00897B"
+        android:onClick="daySelector" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="T  h  u  r  s  d  a  y"
+        android:textSize="10pt"
+        android:id="@+id/button_thursday"
+        android:background="#00796B"
+        android:onClick="daySelector" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="F  r  i  d  a  y"
+        android:textSize="10pt"
+        android:id="@+id/button_friday"
+        android:background="#00695C"
+        android:onClick="daySelector" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="S  a  t  u  r  d  a  y"
+        android:textSize="10pt"
+        android:textColor="#EEEEEE"
+        android:id="@+id/button_saturday"
+        android:background="#c62828"
+        android:onClick="daySelector" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="S  u  n  d  a  y"
+        android:textSize="10pt"
+        android:textColor="#EEEEEE"
+        android:id="@+id/button_sunday"
+        android:background="#b71c1c"
+        android:onClick="daySelector" />
+
+</LinearLayout>
